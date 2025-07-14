@@ -1,0 +1,391 @@
+:root {
+    --ccblack: #181719;
+    --ccgray: #ababab;
+    --ccwhite: white;
+    --ccfont: "Bodoni Moda","Noto Sans", "sans-serif","Sacramento";
+    --ccfontsize: 20px;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family:"Noto Sans", sans-serif;
+    width: 100%;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+header, footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position:relative;
+    width: 65%;
+    background-color:white;
+    color: var( --ccblack);
+}
+
+header {
+    top:0; 
+    border-bottom: 1px solid white;
+}
+
+.brand-logo {
+    display: block;
+    width: 50px; /* Default desktop size */
+    transition: opacity 0.3s ease;
+    margin: 1%; /* Maintains your original h1 spacing */
+}
+
+.brand-logo img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.brand-logo:hover {
+    opacity: 0.8;
+}
+main{
+    flex:1;
+    
+}
+footer {
+    bottom: 0;
+    border-top: 10px solid var(--ccwhite);
+    justify-content: center;
+    padding: 40px;
+    font-size: calc(var(--ccwhite) * 0.7);
+}  
+ 
+h1 {
+    font-family:"Commissioner";
+    font-size: calc(var(--ccfontsize) * 1);
+    font-weight: 400;
+    color: var(--ccblack);
+    margin: 1%;
+    justify-self: flex-start;
+}
+
+nav {
+    width: 20%;
+}
+
+nav ul {
+    display: flex;
+    justify-content:flex-end;
+    align-items:center;
+    width: 70%;
+    height:60%;   
+}
+
+nav ul li {
+    list-style: none;
+    font-family:"Noto Sans", sans-serif;
+    font-size: calc(var(--ccfontsize) * 0.7); 
+    flex: auto;
+}  
+
+nav ul li:hover {
+    background-color: rgb(228, 226, 226);
+}
+
+nav ul li a {
+    text-decoration: none;
+    padding:10px;
+    color: var(--ccblack);
+}   
+
+main {
+    flex:0;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+main #hero {
+    width: 100%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: center;
+    margin-bottom:0;
+    padding:0px;
+} 
+
+main #hero .fig {
+    margin:0;
+    width: 65%;
+    padding:1%;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+
+main #hero .fig ul {
+    display:flex;
+    flex-direction:row;
+    width: 90%;
+    justify-content: center;
+    padding-inline-start: 0;
+}
+
+main #hero .fig ul li {
+    list-style: none;
+    font-family:"Noto Sans", sans-serif;
+    font-size: calc(var(--ccfontsize) * 0.8); 
+    font-weight: 500;
+    flex:auto;
+    padding: 2px 4px;
+    text-align: center;
+    display: inline-block;
+    width: 150px;
+}   
+
+main #hero .fig ul li a {
+    text-decoration:none;
+    padding:1px;
+    color: var(--ccblack);
+}   
+
+main .fig ul li:hover {
+    background-color: rgb(228, 226, 226);
+    cursor:pointer;
+}
+
+main .fig ul li:hover a {
+    color: var(--ccwhite);
+}
+
+main #hero > h2 {
+    font-family: var(--ccfont);
+    color: var(--ccblack);
+    font-size: calc(var(--ccfontsize) * 3.5);
+    font-weight: 100;
+    font-optical-sizing:auto;
+    font-style: normal;
+    line-height: calc(var(--ccfontsize) * 3.3);
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+main #hero > p {
+    font-family:"Noto Sans", sans-serif;
+    color: var(--ccblack);
+    font-size: calc(var(--ccfontsize) *0.8);
+    font-weight: 400;
+    text-align: center;
+    line-height:30px;
+    margin: 0% 20% 1%;
+}
+
+main #featured {
+    background-color:white;
+    width: 60%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content:center;
+    margin-top:0px;
+}
+
+main #featured > div {
+    width:100%;
+    height:40vh;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0px;
+    padding: 0;
+}
+
+/* 1 */
+main #featured > .license-collaboration {
+    background-image: url(images-crossover/Crossover-Front2.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: all 0.3s;
+} 
+main #featured .co-branding {
+    background-image: url(images-co-brand/Bella-Front.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: all 0.3s;
+}   
+
+main #featured > .online-posts-exhibition {
+    background-image: url(images-couverture/Online5.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: all 0.3s;
+} 
+main #featured > .others-packaging {
+    background-image: url(images-pd/PD-M3.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: all 0.3s;
+} 
+
+footer .contact> h3 {
+    font-family: var(--ccfont);
+    color: var(--ccblack);
+    font-size: calc(var(--ccfontsize) * 1.3);
+    font-weight: 100;
+    font-optical-sizing:auto;
+    font-style: normal;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.contact{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact > button{
+    font-family: var("Noto Sans");
+    font-size: calc(var(--ccfontsize) * 0.7);
+    font-weight: 400;
+    background-color: var(--ccwhite);
+    border: 1.5px solid var(--ccblack);
+    padding: 8px 50px;
+    margin-top:  5px;
+}
+
+.contact > button a {
+    color: var(--ccblack);
+    text-decoration: none;
+}
+
+button:hover {
+    background-color: rgb(228, 226, 226);
+}
+
+button:hover a {
+    color: var(--ccblack);
+}
+
+button:active {
+    transform: scale(0.2);
+}
+
+/*---- @MEDIA RULES ----*/
+
+
+@media (max-width: 1200px) {
+    :root {
+        --batfontsize: 16px;
+    }  
+
+    body {
+        min-height: 100vh; 
+    } 
+
+    header, footer {
+    width: 80%;
+    } 
+    
+    nav ul li {
+        font-size: calc(var(--ccfontsize) * 0.65);
+    }
+
+    main #hero > h1 {
+        font-size: calc(var(--ccfontsize) * 0.9);
+    }
+    main #hero > h2 {
+        font-size: calc(var(--ccfontsize) * 2.3);
+        line-height: calc(var(--ccfontsize) * 2.5);
+        margin:1%;
+    }
+
+    main #hero > p {
+        font-size: calc(var(--ccfontsize) * 0.6);
+        margin: 1% 10%;
+        line-height:20px;
+    }
+
+    .fig ul {
+        padding-inline-start: 0;
+    }
+    .fig ul li a{
+    font-size: calc(var(--ccfontsize) * 0.7); 
+    }
+
+    main #featured {
+    grid-template-columns: repeat(2, 1fr);
+    width: 80%;
+    }
+
+    main #featured > div {
+    width:100%;
+    height:30vh;
+    }
+}
+
+@media (max-width: 960px) {
+    .brand-logo {
+    width: 40px; /* Default desktop size */
+
+}
+
+    main #hero > p {
+    margin: 0% 5% 1%;
+    }
+
+    main #hero .fig {
+    width: 90%;
+}
+    main #hero .fig ul {
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    line-height:15px;
+    width: 100%;
+    }
+
+    .fig ul li a{
+    font-size: calc(var(--ccfontsize) * 0.65); 
+    }
+
+    header, footer {
+    width: 90%;
+    }
+
+    main #hero > h2 {
+    font-weight: 600;
+    }
+
+    footer .contact> h3 {
+    font-size: calc(var(--ccfontsize) * 0.8);
+}
+    main #featured {
+    grid-template-columns: repeat(1, 1fr);
+    width: 100%;
+    }
+
+    main #featured > div {
+    width:100%;
+    height:30vh;
+    }
+}
+/* ///////// IMAGE LINKS ///////////////////*/
+.license-collaboration:hover, .co-branding:hover, .online-posts-exhibition:hover, .others-packaging:hover{
+    cursor: pointer;
+    transform: scale(1.025);
+    box-shadow: 0px 5px 15px rgb(91, 91, 91);
+}
+.license-collaboration:active, .co-branding:active, .online-posts-exhibition:active, .others-packaging:active{
+    cursor: pointer;
+    transform: scale(1);
+}
